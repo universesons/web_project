@@ -9,7 +9,8 @@ const routes = [
     },
     {
         path: '/register',
-        component:register
+        name:'register',
+        component: register   //注册页面的路由,component属性指定了渲染的组件
     },
     {
         path: '/login',
@@ -18,7 +19,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL), //作用是创建WebHistory实例，用于管理路由历史记录，process.env.BASE_URL是当前项目的根路径
     routes
 })
 
