@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from banking.views import RegisterView
 
 urlpatterns = [
-    path("banking/",include("banking.urls")),
+    # path("banking/",include("banking.urls")),
+    path("api/register/",RegisterView.as_view(),name="register"),  #as_view()用于将类视图转换为视图函数，为什么要转换为视图函数？因为类视图需要通过请求对象进行处理，而视图函数不需要。
     path("admin/", admin.site.urls),   
 ]
