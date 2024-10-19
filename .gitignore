@@ -1,4 +1,8 @@
 #Python bytecode files
-__pycache__/
-*.py[cod]
-*$py.class
+backend/mysite/banking/__pycache__/
+backend/mysite/banking/*.py[cod]
+backend/mysite/banking/*$py.class
+
+backend/mysite/mysite/__pycache__/
+backend/mysite/mysite/*.py[cod]
+backend/mysite/mysite/*$py.class
