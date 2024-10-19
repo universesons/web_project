@@ -18,7 +18,10 @@
             submit() {
                 this.$http.post('/api/register/', {"username": this.username, "password": this.password})
                 .then((response) => {
-                    alert(response.data.msg)
+                    alert(response.data.msg || '注册成功');
+                })
+                .catch((error) => {
+                    alert(error.response.data.msg || '注册失败');
                 })
             }
         }
